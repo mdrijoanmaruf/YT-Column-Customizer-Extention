@@ -1,0 +1,259 @@
+:root {
+  --primary-color: #ff0000;
+  --primary-hover: #cc0000;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --section-bg: #f8f9fa;
+  --button-hover: #f1f3f4;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--section-bg);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.control-button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: white;
+  color: var(--text-color);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.control-button:hover {
+  background-color: var(--button-hover);
+  color: var(--primary-color);
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 8px 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.2s;
+  background: white;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1);
+}
+
+.preview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.preview {
+  background-color: var(--section-bg);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.preview-grid {
+  display: grid;
+  gap: 8px;
+  height: 80px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.footer {
+  padding: 16px 20px;
+  background-color: var(--section-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+.save-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.save-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.save-button.success {
+  background-color: #4CAF50;
+  animation: successPulse 0.5s ease-in-out;
+}
+
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Remove number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Add smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+} 
+
+
+.preview-grid {
+  display: grid;
+  gap: 8px;
+  height: 120px; 
+  background-color: var(--section-bg);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.preview-item {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.preview-grid {
+  display: grid;
+  gap: 10px;
+  height: 160px;
+  background-color: #f5f5f5; 
+  border-radius: 8px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.preview-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+}

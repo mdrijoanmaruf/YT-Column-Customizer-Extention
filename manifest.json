@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Column Customizer",
+  "version": "1.0",
+  "description": "Customize the number of video columns on YouTube's home page",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+} 
